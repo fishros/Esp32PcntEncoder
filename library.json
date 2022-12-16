@@ -1,0 +1,14 @@
+{
+  "name": "Esp32PcntEncoder",
+  "keywords": "ESP32, Encoder Detect With PCNT",
+  "description": "ESP32 PCNT",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/fishros/Esp32PcntEncoder.git"
+  },
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
+
