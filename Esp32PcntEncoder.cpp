@@ -30,7 +30,7 @@ static void pcnt_overflow_handler(void *arg)
 	}
 }
 
-bool Esp32PcntEncoder::init(int pinA, int pinB, int _pcntUnit)
+bool Esp32PcntEncoder::init( int _pcntUnit, int pinA, int pinB)
 {
 	this->_pinA = pinA;
 	this->_pinB = pinB;

@@ -9,7 +9,7 @@ class Esp32PcntEncoder
 {
 public:
 	Esp32PcntEncoder() = default;
-	bool init(int pinA, int pinB, int pcntUnit);
+	bool init(int pcntUnit, int pinA, int pinB);
 	bool setGlitchFilter(uint32_t max_glitch_us);
 	bool start();
 	bool reset();
