@@ -75,7 +75,7 @@ bool Esp32PcntEncoder::init( int _pcntUnit, int pinA, int pinB)
 	pcnt_event_enable(pcntUnit, PCNT_EVT_H_LIM);
 	pcnt_event_enable(pcntUnit, PCNT_EVT_L_LIM);
 
-	// setGlitchFilter(1);
+	setGlitchFilter(1000);
 	start();
 
 	return true;
@@ -83,7 +83,7 @@ bool Esp32PcntEncoder::init( int _pcntUnit, int pinA, int pinB)
 
 bool Esp32PcntEncoder::setGlitchFilter(uint32_t max_glitch_us)
 {
-	ROTARY_CHECK(pcnt_set_filter_value(pcntUnit, max_glitch_us * 80) == ESP_OK, "set glitch filter failed", err, ESP_FAIL);
+	ROTARY_CHECK(pcnt_set_filter_value(pcntUnit, max_glitch_us * 1) == ESP_OK, "set glitch filter failed", err, ESP_FAIL);
 	if (max_glitch_us)
 	{
 		pcnt_filter_enable(pcntUnit);
